@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-double fontSize(int size, BuildContext context) {
+double fontSize(double size, BuildContext context) {
   return MediaQuery.of(context).size.width / size;
 }
 
-double width(int size, BuildContext context) {
+double width(double size, BuildContext context) {
   return MediaQuery.of(context).size.width / size;
 }
 
-double height(int size, BuildContext context) {
+double height(double size, BuildContext context) {
   return MediaQuery.of(context).size.height / size;
 }
 
@@ -52,6 +52,6 @@ class sizes{
       fontSize: fontSize(32, context),
       color: color,
     );
-    
+
   }
 }

@@ -1,4 +1,5 @@
 import 'package:demo/util/sizes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
@@ -20,15 +21,18 @@ class Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {},
-      child: Text(label!),
-      style: ButtonStyle(
-        minimumSize: MaterialStateProperty.all(Size(width(16, context), 32)),
-        backgroundColor: MaterialStateProperty.all(buttonColor),
-        // foregroundColor: MaterialStateProperty.all(labelColor),
-        // textStyle: MaterialStateProperty.all(TextStyle(
-        // )),
-        padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 32, vertical: 12)
-      ),
-    ));
+      child: Container(
+        alignment: Alignment.center,
+        width: width(2.5, context),
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Colors.blue[900]
+        ),
+        // width: width(4, context) + 24,
+        height: 42,
+        child: Text(label!, style: sizes.headline4(context, FontWeight.bold),)),
+      
+    );
   }
 }

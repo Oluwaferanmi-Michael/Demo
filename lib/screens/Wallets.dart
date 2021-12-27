@@ -71,11 +71,13 @@ class _WalletsState extends State<Wallets> {
               child: Text('WALLETS', style: sizes.headline4(context, FontWeight.bold, color: Colors.black)
               ),),
 
-              ListView.builder(itemBuilder: () {
-                return currency();
-                },
-                itemCount: 22,
-                )
+              Expanded(
+                child: ListView.builder(
+                  itemBuilder: (context, index) => currency(context),
+                  itemCount: 22,
+                  ),
+              )
+              
           ],
         )
       ),

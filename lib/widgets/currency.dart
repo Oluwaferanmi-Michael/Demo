@@ -2,7 +2,7 @@ import 'package:demo/util/sizes.dart';
 import 'package:flutter/material.dart';
 
 
-Widget currency(BuildContext context) {
+Widget currency(BuildContext context,) {
    return Container(
     width: width(1, context),
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -18,7 +18,7 @@ Widget currency(BuildContext context) {
             style: sizes.headline4(context, FontWeight.normal,
                 color: Colors.black),
           )),
-      Text('867',
+      Text('867 NGN',
           style: sizes.headline4(context, FontWeight.bold, color: Colors.black))
     ]),
   );

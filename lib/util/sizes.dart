@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 fontSize(int size, BuildContext context) {
@@ -15,19 +13,20 @@ class sizes{
     );
   }
 
-  static TextStyle headline2(BuildContext context,
+  static TextStyle headline2(BuildContext context, FontWeight? fontWeight,
       {Color color = Colors.white}) {
     return TextStyle(
       fontSize: fontSize(16, context),
       color: color,
+      fontWeight: fontWeight
     );
   }
 
-  static TextStyle headline3(BuildContext context,
-      {Color color = Colors.white}) {
+  static TextStyle headline3(BuildContext context, FontWeight? fontWeight, {Color color = Colors.white}){
     return TextStyle(
       fontSize: fontSize(24, context),
       color: color,
+      fontWeight: fontWeight
     );
   }
 

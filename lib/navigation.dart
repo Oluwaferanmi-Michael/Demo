@@ -38,7 +38,7 @@ class _NavigationState extends State<Navigation> {
         child: BottomNavigationBar(
         currentIndex: pageIndex,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.folder), label: 'Wallets'),
+          BottomNavigationBarItem(icon: Icon(Icons.folder_outlined), label: 'Wallets'),
           BottomNavigationBarItem(icon: Icon(Icons.credit_card_outlined), label: 'Cards'),
           BottomNavigationBarItem(icon: Icon(Icons.show_chart), label: 'Transactions'),
           BottomNavigationBarItem(icon: Icon(Icons.person_outline_outlined), label: 'Profile')

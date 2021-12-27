@@ -1,4 +1,5 @@
 import 'package:demo/util/sizes.dart';
+import 'package:demo/widgets/Buttons.dart';
 import 'package:flutter/material.dart';
 
 class Wallets extends StatefulWidget {
@@ -16,36 +17,56 @@ class _WalletsState extends State<Wallets> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              color: Colors.blue[900],
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+              color: Colors.deepPurple,
               child: Column(
-                crossAxisAlignment: 
-                CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                
                 children: [
+                  const SizedBox(
+                  height: 42,
+                ),
+
                 Row(
                   children: [
-                    const SizedBox(height: 120,),
                     Expanded(
                       flex: 1,
-                      child: Text('Hello \$miracle', style: sizes.headline2(context, FontWeight.bold))),
+                      child: Text('Hello \$miracle', style: sizes.headline3(context, FontWeight.bold))),
                     
-                    SizedBox(
-                      height: 30,
-                      width: 30,
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          // Icon(Icons.capt)
-                          IconButton(onPressed: (){}, color: Colors.white, icon: const Icon(Icons.qr_code_2_outlined)),
-                        ],
-                      ))
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        // Icon(Icons.capt)
+                        IconButton(onPressed: (){}, color: Colors.white, icon: const Icon(Icons.qr_code_2_outlined)),
+                      ],
+                    )
                   ],
                 ),
 
-                Text('What would you like to do today ?', style: sizes.headline3(context, FontWeight.normal),)
+                Text('What would you like to do today ?', style: sizes.headline5(context, FontWeight.normal),),
+
+                Row(
+                  // crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Buttons(label: 'FUND WALLET',
+                    ),
+                    Buttons(
+                      label: 'WITHDRAW',
+                    )
+                  ],
+                )
               ],),
             ),
+
+            Container(
+              width: width(1, context),
+              color: Colors.grey[300],
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Text('WALLET', style: sizes.headline4(context, FontWeight.normal, color: Colors.black)
+              ),)
             
+
           ],
         )
       ),

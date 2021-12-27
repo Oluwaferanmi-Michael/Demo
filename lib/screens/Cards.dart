@@ -10,8 +10,10 @@ class Cards extends StatefulWidget {
 class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return const Scaffold(
+      body: Center(
+        child: Text('Cards'),
+      )
     );
   }
 }

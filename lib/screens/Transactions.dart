@@ -12,8 +12,9 @@ class Transactions extends StatefulWidget {
 class _TransactionsState extends State<Transactions> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return const Scaffold(
+        body: Center(
+      child: Text('Transactions'),
+    ));
   }
 }
